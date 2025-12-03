@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voither HealthOS - Relatório Clínico</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Nunito Sans"', 'sans-serif'],
+              mono: ['"Roboto Mono"', 'monospace'],
+              display: ['"Space Grotesk"', 'sans-serif'],
+              brand: ['"Josefin Sans"', 'sans-serif'],
+            },
+            colors: {
+              // Design System Color Palette
+              surface: {
+                DEFAULT: '#ffffff',
+                subtle: '#f8fafc', // Slate 50
+                muted: '#f1f5f9', // Slate 100
+              },
+              text: {
+                primary: '#0f172a', // Slate 900
+                secondary: '#334155', // Slate 700
+                tertiary: '#94a3b8', // Slate 400
+                quaternary: '#cbd5e1', // Slate 300
+              },
+              border: {
+                DEFAULT: '#e2e8f0', // Slate 200
+                strong: '#0f172a', // Slate 900
+              }
+            },
+            letterSpacing: {
+              tighter: '-0.05em',
+              tight: '-0.025em',
+              normal: '0em',
+              wide: '0.05em',
+              widest: '0.25em',
+            },
+            spacing: {
+              'screen-a4': '210mm',
+              'content': '15mm',
+            }
+          },
+        },
+      }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..900;1,6..12,200..900&family=Roboto+Mono:wght@100..600&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+      /* Layout System for Print */
+      @media print {
+        @page {
+          margin: 0;
+          size: A4;
+        }
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          background-color: white;
+        }
+        .print-break-inside-avoid {
+          break-inside: avoid;
+        }
+        .print-break-before {
+          break-before: page;
+        }
+        .print-break-after {
+          break-after: page;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 antialiased print:bg-white text-text-primary">
+    <div id="root"></div>
+  </body>
+</html>
